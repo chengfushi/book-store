@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chengfu.usercenterapi.mapper.OrderItemMapper">
+
+    <resultMap id="BaseResultMap" type="com.chengfu.usercenterapi.model.domain.OrderItem">
+            <id property="id" column="id" />
+            <result property="orderId" column="order_id" />
+            <result property="bookId" column="book_id" />
+            <result property="bookIsbn" column="book_isbn" />
+        <result property="bookName" column="book_name" />
+            <result property="quantity" column="quantity" />
+            <result property="price" column="price" />
+            <result property="createTime" column="create_time" />
+            <result property="isDeleted" column="is_deleted" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,order_id,book_id,book_isbn,quantity,price,
+        create_time,is_deleted，book_name
+    </sql>
+</mapper>
